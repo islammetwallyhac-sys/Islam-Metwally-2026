@@ -22,10 +22,10 @@
   *{box-sizing:border-box;}
   body{
     margin:0;
-    background:var(--bg);
-    background-image:
-      radial-gradient(circle at 1px 1px, rgba(32,38,43,0.05) 1px, transparent 0);
-    background-size: 22px 22px;
+    background-color:var(--bg);
+    background-image: url('tribal-pattern.svg');
+    background-repeat:repeat;
+    background-size: 200px 200px;
     color:var(--ink);
     font-family:'Inter',sans-serif;
     display:flex;
@@ -81,6 +81,36 @@
   }
   .tagline .split{ color:var(--blue); }
   .tagline .split2{ color:var(--amber); }
+
+  .avatar-wrap{
+    width:132px;
+    height:132px;
+    margin:0 auto 22px;
+    position:relative;
+  }
+  .avatar-ring{
+    position:absolute;
+    inset:-6px;
+    border-radius:50%;
+    background:conic-gradient(from 200deg, var(--blue), var(--amber), var(--blue));
+    padding:2px;
+  }
+  .avatar-ring::before{
+    content:"";
+    position:absolute;
+    inset:2px;
+    border-radius:50%;
+    background:var(--bg);
+  }
+  .avatar-wrap img{
+    position:relative;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    border:3px solid var(--paper);
+  }
 
   section{ margin-top:34px; }
   .section-label{
@@ -172,6 +202,10 @@
 <div class="page">
 
   <div class="hero">
+    <div class="avatar-wrap">
+      <div class="avatar-ring"></div>
+      <img src="islam-avatar.jpg" alt="Islam Metwally">
+    </div>
     <div class="eyebrow">Document Control &amp; Visual Craft</div>
     <h1>Islam Metwally</h1>
     <p class="arabic-name">إسلام محمد متولي</p>
