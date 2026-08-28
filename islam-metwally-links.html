@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Islam Metwally | Senior Document Controller</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F7F5;
+    --paper:#FFFFFF;
+    --ink:#20262B;
+    --ink-soft:#5B6670;
+    --line:#E3E7E4;
+    --blue:#4C7A93;      /* precision / document-control accent */
+    --blue-soft:#EAF1F4;
+    --amber:#D9A441;     /* light / photography accent */
+    --amber-soft:#FBF2DF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(32,38,43,0.05) 1px, transparent 0);
+    background-size: 22px 22px;
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    display:flex;
+    justify-content:center;
+    padding:56px 20px 80px;
+  }
+  .page{ width:100%; max-width:600px; }
+
+  .hero{ text-align:center; margin-bottom:34px; }
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before,.eyebrow::after{
+    content:"";
+    height:1px; width:28px;
+    background:var(--line);
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:44px;
+    line-height:1.05;
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .arabic-name{
+    font-size:18px;
+    color:var(--ink-soft);
+    margin:0 0 14px;
+  }
+  .role{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .role b{ color:var(--ink); font-weight:600; }
+
+  .tagline{
+    margin-top:22px;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+  .tagline .split{ color:var(--blue); }
+  .tagline .split2{ color:var(--amber); }
+
+  section{ margin-top:34px; }
+  .section-label{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:0 0 12px;
+    padding-left:2px;
+  }
+
+  .card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:15px 18px;
+    text-decoration:none;
+    color:var(--ink);
+    border-bottom:1px solid var(--line);
+    transition:background .15s ease;
+  }
+  .row:last-child{ border-bottom:none; }
+  a.row:hover{ background:var(--blue-soft); }
+  .row .label{ display:flex; align-items:center; gap:12px; font-size:14.5px; font-weight:500; }
+  .row .value{ font-size:13px; color:var(--ink-soft); text-align:right; direction:ltr; }
+  .dot{
+    width:7px; height:7px; border-radius:50%;
+    flex:none;
+    background:var(--blue);
+  }
+  .dot.amber{ background:var(--amber); }
+  .dot.grey{ background:var(--ink-soft); opacity:.5; }
+  .arrow{ color:var(--ink-soft); font-size:14px; flex:none; }
+
+  .info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .info-cell{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:14px 16px;
+  }
+  .info-cell .k{
+    font-family:'Space Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .info-cell .v{ font-size:14.5px; font-weight:600; }
+
+  .badge-strip{
+    display:flex; gap:8px; flex-wrap:wrap; margin-top:14px;
+  }
+  .badge{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    padding:6px 12px;
+    border-radius:99px;
+    background:var(--amber-soft);
+    color:#8A651E;
+    border:1px solid #EEDFB8;
+  }
+  .badge.blue{ background:var(--blue-soft); color:#2E5468; border-color:#D3E3EA; }
+
+  footer{
+    margin-top:46px;
+    text-align:center;
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    letter-spacing:.05em;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <div class="eyebrow">Document Control &amp; Visual Craft</div>
+    <h1>Islam Metwally</h1>
+    <p class="arabic-name">إسلام محمد متولي</p>
+    <p class="role"><b>Senior Document Controller</b> · ARKIVEX‑DCS &amp; Hawk's Eye Media</p>
+    <p class="tagline">Precision <span class="split">by Day</span> — Perspective <span class="split2">by Light</span></p>
+  </div>
+
+  <section>
+    <p class="section-label">Get in touch</p>
+    <div class="card">
+      <a class="row" href="mailto:Islam.Metwally@outlook.com">
+        <span class="label"><span class="dot"></span>Email</span>
+        <span class="value">Islam.Metwally@outlook.com</span>
+      </a>
+      <a class="row" href="https://wa.me/201064675155">
+        <span class="label"><span class="dot"></span>WhatsApp</span>
+        <span class="value">+20 106 467 5155</span>
+      </a>
+      <a class="row" href="tel:+201064675155">
+        <span class="label"><span class="dot"></span>Call</span>
+        <span class="value">+20 106 467 5155</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label">Professional</p>
+    <div class="card">
+      <a class="row" href="https://www.linkedin.com/in/islam-metwally87" target="_blank" rel="noopener">
+        <span class="label"><span class="dot"></span>LinkedIn</span>
+        <span class="value">islam-metwally87 →</span>
+      </a>
+      <a class="row" href="https://1drv.ms/b/c/e144c33c92aae857/IQC5uogEQSt8TLga1CiOAKxfAYqpthXCkf2beBlbrAThQEU?e=inWVOk" target="_blank" rel="noopener">
+        <span class="label"><span class="dot"></span>Resume / CV</span>
+        <span class="value">Download PDF →</span>
+      </a>
+      <a class="row" href="https://k4kzb8w6hisx.space.minimax.io/#home" target="_blank" rel="noopener">
+        <span class="label"><span class="dot"></span>ARKIVEX‑DCS</span>
+        <span class="value">Official Website →</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label">Creative work</p>
+    <div class="card">
+      <a class="row" href="https://www.behance.net/islammetwally" target="_blank" rel="noopener">
+        <span class="label"><span class="dot amber"></span>Behance</span>
+        <span class="value">Photography &amp; Design →</span>
+      </a>
+      <a class="row" href="https://www.instagram.com/islammetwally.photography" target="_blank" rel="noopener">
+        <span class="label"><span class="dot amber"></span>Instagram</span>
+        <span class="value">islammetwally.photography →</span>
+      </a>
+      <a class="row" href="https://www.facebook.com/share/1BxxYDP9Ko/" target="_blank" rel="noopener">
+        <span class="label"><span class="dot amber"></span>Facebook</span>
+        <span class="value">Facebook Page →</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label">At a glance</p>
+    <div class="info-grid">
+      <div class="info-cell">
+        <div class="k">Mobile</div>
+        <div class="v">+20 106 467 5155</div>
+      </div>
+      <div class="info-cell">
+        <div class="k">Birth date</div>
+        <div class="v">06 · 08 · 1987</div>
+      </div>
+      <div class="info-cell">
+        <div class="k">Marital status</div>
+        <div class="v">Married</div>
+      </div>
+      <div class="info-cell">
+        <div class="k">Military status</div>
+        <div class="v">Exempted</div>
+      </div>
+    </div>
+    <div class="badge-strip">
+      <span class="badge blue">Owner Representation</span>
+      <span class="badge blue">Document Control</span>
+      <span class="badge">Photography</span>
+      <span class="badge">Graphic Design</span>
+    </div>
+  </section>
+
+  <footer>© Islam Metwally — updated 2026</footer>
+
+</div>
+</body>
+</html>
